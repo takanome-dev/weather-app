@@ -7,6 +7,7 @@ class Weather {
   async getWeather() {
     const response = await fetch(`/.netlify/functions/getWeather`, {
       method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         city: this.city,
         state: this.state,
