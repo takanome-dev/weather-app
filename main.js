@@ -1,3 +1,4 @@
+// Init LocalStorage
 const storage = new LocalStorage();
 const weatherLocation = storage.getLocationData();
 // Init Weather & UI
@@ -18,14 +19,17 @@ const getWeather = async () => {
   }
 };
 
+// Event Listener For Change Location
 document.getElementById("w-change-btn").addEventListener("click", (e) => {
   const city = document.getElementById("city").value;
   const state = document.getElementById("state").value;
 
   weather.changeLocation(city, state);
 
+  // SetItem To LocalStorage
   storage.setLocationData(city, state);
 
+  // Get The Weather
   getWeather();
 
   $("#locModal").modal("hide");
