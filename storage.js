@@ -2,8 +2,8 @@ class LocalStorage {
   constructor() {
     this.city;
     this.state;
-    this.defaultCity = "Miami";
-    this.defaultState = "US-FL";
+    this.defaultCity = "Arizona";
+    this.defaultState = "US-AZ";
   }
 
   getLocationData() {

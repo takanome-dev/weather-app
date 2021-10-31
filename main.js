@@ -1,8 +1,8 @@
 // Init LocalStorage
 const storage = new LocalStorage();
-const weatherLocation = storage.getLocationData();
+const { city, state } = storage.getLocationData();
 // Init Weather & UI
-const weather = new Weather(weatherLocation.city, weatherLocation.state);
+const weather = new Weather(city, state);
 const ui = new UI();
 
 const getWeather = async () => {
